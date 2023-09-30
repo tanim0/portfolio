@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+// ブレイクポイントmixin
+@mixin media_sp(){
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media_tab(){
+  @media only screen and (max-width: 980px) {
+    @content;
+  }
+}
+
+@mixin media_pc(){
+  @media only screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+html {
+  font-family: Roboto,
+  "Helvetica Neue",
+  Arial,
+  "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans",
+  Meiryo,
+  sans-serif;
+}
+
+@import '_reset.scss';
+@import '_color.scss';
+
+// footer下部固定
+.containar {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+  min-height: 1px;
+}
+
+.pc {
+  @media screen and (max-width:768px) {
+    display: none !important;
+  }
+}
+
+.sp {
+  @media screen and (min-width:769px) {
+    display: none !important;
+  }
+}
+
+html {
+  background: rgb(136, 134, 134);
+}
+
+body {
+  font-size: 14px;
+}
+
+
+h1 {
+  // font-size: 10px;
+}
+
+// header 
+.ly_header {
+  width: 100%;
+  height: 40px;
+  top: 0;
+  z-index: 100;
+  color: $colorWhite;
+  background: $themeColor;
+  box-shadow: 0 0 10px -6px $nonColored_06;
+  position: fixed;
+
+  &.page_top {
+    background-color: $transparent;
+    box-shadow: none;
+  }
+
+}
+
+.ly_header_inner {
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bl_headerNav {
+  display: flex;
+
+  a {
+    padding: 0 30px;
+  }
+}
+
+// footer
+.ly_footer {
+  // padding: 34px 0;
+  width: 100%;
+  text-align: center;
+  background: $nonColored_3;
+  color: $colorWhite;
+  line-height: 40px;
+  font-size: 12px;
+}
+
+
+
+// main
+.ly_main {
+  // padding-top: 40px;
+}
+
+.ly_main_inner {
+  // margin: 0 auto;
+  // max-width: 980px;
+  // background: cadetblue;
+
+}
+
+
+
+// parts
+// btn
+.el_btn_borderd {
+  margin: 0 10px;
+
+  a {
+    width: 300px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    max-width: 300px;
+    border: 1px solid $colorWhite;
+    color: $colorWhite;
+  }
+}
+
+
+.ly_top_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// section 
+.section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.section_title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section_text {
+  line-height: 1.6;
+}
+
+
+// page_top
+// section_top
+.section_top {
+  position: relative;
+  background: $themeColor;
+
+}
+
+.top_img {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  // margin: 50px auto 0;
+
+  img {
+    width: 100%;
+    height: 50vw;
+    object-fit: cover;
+    object-position: 100% 100%;
+
+    opacity: 0;
+    filter: blur(20px) brightness(2);
+    // transform: scale(1.2);    
+  }
+}
+
+.top_img {
+  &.active img {
+    opacity: 1;
+    filter: blur(0px) brightness(1);
+    // transform: scale(1);
+    // transition: all 2.5s ease-out;
+    transition: all 2s ease-out;
+  }
+}
+
+.top_txt {
+  width: 100%;
+  top: 10vw;
+  position: absolute;
+  text-align: center;
+  color: $colorWhite;
+  
+}
+
+.top_txt_name {
+  margin-bottom: 3vw;
+  font-size: 13vw;
+}
+
+.top_txt_title {
+  font-size: 5vw;
+  font-weight: 500;
+}
+
+.top_txt_arrow {
+  position: relative;
+  width: 100px;
+  margin: 5vw auto 0;
+  transform: rotate(90deg);
+
+  .line01 {
+    display: block;
+    height: 2px;
+    background-color: $colorWhite;
+  }
+
+  .line02 {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: right bottom;
+    width: 20px;
+    height: 2px;
+    background-color: $colorWhite;
+    transform: rotate(45deg);
+  }
+}
+
+
+// section_about
+.section_about {
+  // padding: 50px 0 0;
+  // text-align: center;
+}
+
+.section_works {
+  .section_title {
+    padding-left: 50px;
+  }
+  background: $themeColor;
+  color: $colorWhite;
+
+  a {
+    display: flex;
+    margin-left: 10px;
+    // font-size: 30px;
+  }
+}
+
+.material-symbols-outlined {
+  font-size: 30px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 40
+}
+
+.material-symbols-outlined.fill {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 40
+}
+

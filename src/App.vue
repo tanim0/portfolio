@@ -1,32 +1,31 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="containar">
+      <Header />
+      <main class="ly_main">
+        <div class="ly_main_inner">
+          <router-view />
+        </div>
+      </main>
+      <Footer />
     </div>
-    <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-#nav {
-  padding: 30px;
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+  
+  // mounted() {
+  //   const path = this.$route.path
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  // }
+};
+</script>
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
