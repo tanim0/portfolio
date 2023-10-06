@@ -261,17 +261,24 @@ h1 {
 }
 
 .section_works {
-  .section_title {
-    padding-left: 50px;
-  }
+  padding-top: 60px;
+  padding-bottom: 80px;
   background: $themeColor;
   color: $colorWhite;
 
-  a {
-    display: flex;
-    margin-left: 10px;
-    // font-size: 30px;
+  .section_title {
+    margin-bottom: 40px;
+    padding-left: 50px;
+
+    a {
+      display: flex;
+      margin-left: 10px;
+      // font-size: 30px;
+    }
   }
+  
+
+  
 }
 
 .material-symbols-outlined {
@@ -289,5 +296,62 @@ h1 {
   'wght' 200,
   'GRAD' 0,
   'opsz' 40
+}
+
+// swiper
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.swiper-slide {
+  color: #fff;
+  font-weight: bold;
+}
+
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+
+.swiper_img_wrapper {
+  border-radius: 10px;
+  border: 1px solid #fff;
+
+  // hover時のエフェクト関連
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+  }
+
+  &:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+  }
+}
+
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
 }
 
