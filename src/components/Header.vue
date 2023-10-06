@@ -1,5 +1,5 @@
 <template>
-  <header class="ly_header" :class="{'page_top' : is_page_top}">
+  <header class="ly_header">
     <div class="ly_header_inner">
       <div>
         <a href="/">Momoka Tanifuji</a>
@@ -18,11 +18,11 @@
 
 <script>
 export default {
-  computed: {
-    is_page_top() {
-      return this.$route.path == '/'
-    }
-  },
+  // computed: {
+  //   is_page_top() {
+  //     return this.$route.path == '/'
+  //   }
+  // },
 };
 </script>
 

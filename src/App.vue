@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{'page_top' : is_page_top}">
     <div class="containar">
       <Header />
       <main class="ly_main">
@@ -20,6 +20,11 @@ export default {
   components: {
     Header,
     Footer,
+  },
+  computed: {
+    is_page_top() {
+      return this.$route.path == '/'
+    }
   },
   
   // mounted() {

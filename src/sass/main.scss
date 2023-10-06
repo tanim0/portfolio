@@ -80,10 +80,10 @@ h1 {
   box-shadow: 0 0 10px -6px $nonColored_06;
   position: fixed;
 
-  &.page_top {
-    background-color: $transparent;
-    box-shadow: none;
-  }
+  // &.page_top {
+  //   background-color: $transparent;
+  //   box-shadow: none;
+  // }
 
 }
 
@@ -118,8 +118,12 @@ h1 {
 
 // main
 .ly_main {
-  // padding-top: 40px;
+  padding-top: 40px;
 }
+
+// .page_top .ly_main {
+//   padding-top: 0;
+// }
 
 .ly_main_inner {
   // margin: 0 auto;
@@ -174,6 +178,16 @@ h1 {
 
 
 // page_top
+.page_top {
+  .ly_header {
+    background-color: $transparent;
+    box-shadow: none;
+  }
+
+  .ly_main {
+    padding-top: 0;
+  }
+}
 // section_top
 .section_top {
   position: relative;
