@@ -9,7 +9,7 @@
       </li>
     </ol> -->
     <section class="section_top">
-      <p id="top_img" class="top_img"><img src="../assets/images/img_top.jpeg" alt=""></p>
+      <p id="top_img" class="top_img" :class="{'active': load}"><img src="../assets/images/img_top.jpeg" alt=""></p>
       <div class="top_txt">
         <p class="top_txt_name">Momoka Tanifuji</p>
         <p class="top_txt_title">PORTFOLIO</p>
@@ -60,10 +60,6 @@
 </template>
 
 <script>
-window.onload = function() {
-  document.getElementById("top_img").classList.add("active")
-};
-
 import Swiper from 'swiper/bundle'; 
 import 'swiper/swiper-bundle.css';
 
@@ -81,6 +77,7 @@ export default {
   data() {
     return {
       hoverFlag: false,
+      load: false,
       lists: [],
       list: [
         {
@@ -133,7 +130,7 @@ export default {
     mouseLeaveAction(){
         this.hoverFlag = false
     },
-    test() {
+    swiper() {
       var mySwiper = new Swiper('.swiper', {
         loop: true, // ループ
         slidesPerView: 3, // 一度に表示する枚数
@@ -181,7 +178,9 @@ export default {
       }
   },
   mounted() {
-    this.test();
+    // topイメージ読み込み
+    this.load = true;
+    this.swiper();
   },
 };
 </script>
