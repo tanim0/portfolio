@@ -36,7 +36,7 @@
       <div class="swiper" ref="mySwiper">
         <div class="swiper-wrapper">
             <div v-for="(item, index) in lists" class="swiper-slide" :key="index">
-              <router-link :to="{name:'works', params:{id: item.id} }">
+              <router-link :to="{name:'works_detail', params:{id: item.id} }">
                 <!-- <p>{{item.id}}</p> -->
                 <!-- <p class="swiper_img_wrapper"><img :src="item.image" alt=""/></p> -->
                 <p class="swiper_img_wrapper">
@@ -78,7 +78,7 @@ export default {
     return {
       hoverFlag: false,
       load: false,
-      lists: [],
+      lists: [], // works_list_doubleへ
       list: [
         {
           id: 1,
