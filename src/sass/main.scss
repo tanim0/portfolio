@@ -56,12 +56,14 @@ main {
   }
 }
 
-html {
-  background: rgb(136, 134, 134);
-}
-
 body {
   font-size: 14px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 
@@ -79,6 +81,7 @@ h1 {
   background: $themeColor;
   box-shadow: 0 0 10px -6px $nonColored_06;
   position: fixed;
+  border-bottom: 1px solid $colorWhite;
 
   // &.page_top {
   //   background-color: $transparent;
@@ -174,6 +177,16 @@ h1 {
 
 .section_text {
   line-height: 1.6;
+}
+
+// page
+.page {
+  padding: 40px 30px 100px;
+}
+.page_title {
+  margin-bottom: 40px;
+  font-size: 30px;
+  text-align: center;
 }
 
 
@@ -328,8 +341,7 @@ h1 {
 }
 
 .swiper_img_wrapper {
-  border-radius: 10px;
-  border: 1px solid #fff;
+  border-radius: 5px;
 
   // hover時のエフェクト関連
   margin: 0;
@@ -368,4 +380,104 @@ h1 {
     left: 125%;
   }
 }
+
+// page_works
+.page_works {
+  background: $themeColor;
+  
+  .page_title {
+    color: $colorWhite;
+  }
+}
+
+.works_list {
+  margin: 0 auto;
+  max-width: 560px;
+  max-width: 1280px;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.work_list_item {
+  margin-bottom: 36px;
+  width: 29%;
+  width: 31%;
+
+  a:hover {
+    .work_list_item_icon {
+      position: relative;
+    }
+
+    img {
+      outline: 2px solid $themeColorAccent;
+      transition: outline-color .3s
+    }
+
+    .work_list_item_title {
+      color: $themeColorAccent;
+      transition: color .3s;
+    }
+  }
+  
+}
+
+.work_list_item_icon {
+  margin-bottom: 12px;
+  
+  img {
+    border-radius: 5px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 top;
+    // aspect-ratio: 2.618 / 1;
+    // aspect-ratio: 1.618 / 1;
+    aspect-ratio: 1.732 / 1;
+    // aspect-ratio: 1.9 / 1;
+
+    outline-offset: -2px;
+    outline: 2px solid transparent;
+    transition: all .3s;
+  }
+}
+
+.work_list_item_title {
+  margin-bottom: 4px;
+  font-size: 16px;
+  word-break: break-all;
+  line-height: 1.5;
+  transition: color .3s;
+  color: $themeColorWhite
+}
+
+.work_list_item_range {
+  font-size: 13px;
+  color: $nonColored_9;
+
+  // span:nth-last-child(2) .slash,
+  span:last-child .slash {
+    display: none;
+  }
+}
+
+.link_works_documents {
+  text-align: center;
+
+  a {
+    padding: 16px 40px;
+    display: inline-block;
+    border: 1px solid $colorWhite;
+    color: $colorWhite;
+    transition: all .2s;
+    
+    &:hover {
+      color: $themeColorAccent;
+      border-color: $themeColorAccent;
+      transition: all .2s;
+    }
+  }
+}
+
+// page_woks_detail
 
