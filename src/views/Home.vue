@@ -40,7 +40,7 @@
                 <!-- <p>{{item.id}}</p> -->
                 <!-- <p class="swiper_img_wrapper"><img :src="item.image" alt=""/></p> -->
                 <p class="swiper_img_wrapper">
-                  <img :src="require(`@/assets/images/${item.url}`)" alt=""/>
+                  <img :src="require(`@/assets/images/${item.icon}`)" alt=""/>
                 </p>
               </router-link>
             </div>
@@ -50,6 +50,8 @@
         <div class="swiper-button-next"></div> -->
       </div>
     </section>
+
+    <!-- <p>{{Works}}</p> -->
 
     <section class="section section_skill">
       <p class="section_title">Skill</p>
@@ -63,6 +65,8 @@
 import Swiper from 'swiper/bundle'; 
 import 'swiper/swiper-bundle.css';
 
+import Works from '@/resources/works.js'
+
 export default {
   name: "Home",
   props: {
@@ -73,9 +77,9 @@ export default {
       }
     }
   },
-
   data() {
     return {
+      works_list: Works.works_list.slice().reverse(),
       hoverFlag: false,
       load: false,
       lists: [], // works_list_doubleへ
@@ -172,7 +176,9 @@ export default {
     // swiper-slideが奇数の際のエラー、枚数が少ない際のエラー回避
       for(let i = 0; i < 2; i++) {
         for(let k=0; k < this.list.length; k++) {
-          let item = this.list[k];
+        // for(let k=0; k < this.works_list.length; k++) {
+          let item = this.works_list[k];
+          // let item = this.list[k];
           this.lists.push(item)
         }
       }

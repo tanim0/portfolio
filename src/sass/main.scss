@@ -326,7 +326,8 @@ h1 {
   'FILL' 1,
   'wght' 200,
   'GRAD' 0,
-  'opsz' 40
+  'opsz' 40;
+  color: $themeColorAccent;
 }
 
 // swiper
@@ -352,6 +353,11 @@ h1 {
   padding: 0;
   overflow: hidden;
   position: relative;
+
+  img {
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+  }
 
   &::before {
     position: absolute;

@@ -5,6 +5,7 @@ export default {
       outline_title: 'ファンシー雑貨店イベントスタンプカード',
       outline_description: '雑貨直営店6店舗で小〜中学生をターゲットに配布されたイベント型スタンプカードです。',
       icon: "thumb_stamp.svg",
+      icon_square: "icon_stamp.svg",
       inside: false,
       range: ["Design","Movie"],
       works: [
@@ -35,6 +36,7 @@ export default {
       outline_title: '',
       outline_description: '',
       icon: "icon_muscat.svg",
+      icon_square: "icon_stamp.svg",
       inside: false,
       range: ["Design","Coding"],
       works: [
@@ -55,6 +57,7 @@ export default {
       outline_title: '',
       outline_description: '',
       icon: "thumb_mango.svg",
+      icon_square: "icon_stamp.svg",
       inside: false,
       range: ["Design"],
       works: [
@@ -74,8 +77,8 @@ export default {
       id: 4,
       outline_title: '',
       outline_description: '',
-      // icon: "icon_ori.svg",
       icon: "thumb_ori.svg",
+      icon_square: "icon_ori.svg",
       inside: false,
       range: ["Coding"],
       works: [
@@ -96,6 +99,7 @@ export default {
       outline_title: '『こども免許』サービス紹介動画・個別販売ページ',
       outline_description: 'こどもめんきょの説明',
       icon: "thumb_kodomo.svg",
+      icon_square: "thumb_ori.svg",
       inside: false,
       range: ["Design","Coding","Movie"],
       works: [
@@ -126,6 +130,7 @@ export default {
       outline_title: '',
       outline_description: '',
       icon: "icon_car_png.png",
+      icon_square: "thumb_ori.svg",
       inside: false,
       range: ["Design","Coding"],
       works: [
@@ -146,6 +151,7 @@ export default {
       title: "『法事アプリ』LP",
       range:  ["Design","Coding"],
       icon: "thumb_houji_1.svg",
+      icon_square: "thumb_ori.svg",
       outline_title: '',
       outline_description: '',
       inside: false,
@@ -167,6 +173,7 @@ export default {
       outline_title: '',
       outline_description: '',
       icon: "thumb_union.svg",
+      icon_square: "thumb_ori.svg",
       inside: false,
       range: ["Design","Coding"],
       works: [
@@ -186,6 +193,7 @@ export default {
       id: 9,
       outline: '',
       icon: "thumb_synapse_1.svg",
+      icon_square: "thumb_ori.svg",
       inside: false,
       works: [
         {
