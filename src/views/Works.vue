@@ -8,7 +8,8 @@
           <p class="work_list_item_icon">
             <img :src="require(`@/assets/images/${work.icon}`)" alt=""/>
           </p>
-          <p class="work_list_item_title">{{work.title}}</p>
+          <p v-if="work.outline_title" class="work_list_item_title">{{work.outline_title}}</p>
+          <p v-else class="work_list_item_title">{{work.works[0].title}}</p>
           <p class="work_list_item_range">
             <!-- <span v-for="(category, index) in work.category" :key="index">[{{category}}]</span>
             &nbsp;&nbsp;&nbsp; -->
@@ -23,7 +24,6 @@
     <p class="link_works_documents">
       <router-link to="">過去担当業務一覧ページへ</router-link>
     </p>
-    
   </div>
 </template>
 
@@ -32,7 +32,7 @@ import Works from '@/resources/works.js'
 export default {
   data() {
     return {
-      works_list: Works.works_list,
+      works_list: Works.works_list.slice().reverse()
     }
   },
   components: {

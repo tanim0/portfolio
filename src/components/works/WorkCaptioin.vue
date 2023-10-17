@@ -1,0 +1,30 @@
+<template>
+  <section class="caption_box">
+    <h2 class="work_title">{{work.title}}</h2>
+    <p class="work_time">{{work.period}}</p>
+    <p class="work_range">part：
+      <span v-for="(range, index) in work.range" :key="index">{{range}}&nbsp;<span class="slash">&#9585;</span>&nbsp;</span>
+    </p>
+    <p v-if="work.skill.length > 0" class="work_skill">skill：
+      <span v-for="(skill, index) in work.skill" :key="index">{{skill}}&nbsp;<span class="slash">&#9585;</span>&nbsp;</span>
+    </p>
+    <p class="work_skill">tool：
+      <span v-for="(tool, index) in work.tool" :key="index">{{tool}}&nbsp;<span class="slash">&#9585;</span>&nbsp;</span>
+    </p>
+    <p v-html="work.description" class="work_description"></p>
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'WorkCaption',
+  props: [
+    'work'
+  ]
+
+}
+</script>
+
+<style>
+
+</style>

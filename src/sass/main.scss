@@ -71,6 +71,10 @@ h1 {
   // font-size: 10px;
 }
 
+.mb30 {
+  margin-bottom: 40px !important;
+}
+
 // header 
 .ly_header {
   width: 100%;
@@ -459,6 +463,8 @@ h1 {
   span:last-child .slash {
     display: none;
   }
+
+  
 }
 
 .link_works_documents {
@@ -481,17 +487,176 @@ h1 {
 
 // page_woks_detail
 .page_works_detail {
+  padding-top: 20px;
+  padding-bottom: 10px;
   background: $themeColor;
   color: $themeColorWhite;
 }
 
-.caption_box {
+.works_detail_inner {
   margin: 0 auto 60px;
   padding: 0 20px;
   max-width: 900px;
 }
 
-.work_title {
-  // color: $colorWhite;
+.works_detail_paging {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+
+  p {
+    // padding: 0 20px;
+  }
+
+  a {
+    display: block;
+    padding: 0 20px;
+    width: 100%;
+
+    &:hover {
+      color: $themeColorAccent;
+    }
+  }
+
+  .disable {
+    padding: 0 20px;
+    color: $nonColored_6;
+  }
 }
 
+.caption_box {
+  margin-bottom: 60px;
+}
+
+.work_outline_wrap  {
+  margin-bottom: 50px;
+}
+
+.work_outline_title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: $colorWhite;
+  font-weight: bold;
+}
+
+.work_outline_description {
+
+}
+
+.work_title {
+  margin-bottom: 20px;
+  color: $colorWhite;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.work_time {
+  margin: 10px 0;
+  font-size: 12px;
+}
+
+.work_description {
+  margin: 20px 0 0;
+}
+
+.work_range,
+.work_skill {
+  margin-bottom: 4px;
+
+  span:last-child .slash {
+    display: none;
+  }
+}
+
+.work_description {
+  line-height: 1.6;
+}
+
+
+.img_box {
+  vertical-align: top;
+  display: inline-block;
+
+  .bb {
+    box-sizing: content-box;
+    border-bottom: 1px solid $nonColored_5;
+    // box-shadow: 2px 2px 17px -5px #777777;
+    // box-shadow: 0px 2px 25px 0px #494949;
+  }
+
+  
+
+  img {
+    margin-bottom: 100px;
+  }
+
+  .mb0 {
+    margin-bottom: 0;
+  }
+}
+
+.img_pc {
+  // margin-bottom: 90px;
+  margin: 0 10% 0 0;
+  max-width: 500px;
+}
+
+.img_sp {
+  max-width: 240px;
+}
+
+.img_caption {
+  margin: 0 0 6px;
+  font-size: 14px;
+  // color: $themeColorAccent;
+}
+
+.img_stamp {
+  margin: 0 10% 0 0;
+  max-width: 400px;
+}
+
+.img_rough {
+  max-width: 300px;
+}
+
+.password {
+  color: red;
+}
+
+// .page-stamp 
+.img_movie {
+  margin: 40px 0 0;
+}
+
+.img_app {
+  max-width: 220px;
+  margin: 0 10% 0 0;
+}
+
+.app_icon {
+  width: 100px;
+}
+
+.item_caption.second {
+  margin: 60px 0 0;
+}
+
+
+
+
+.work_ly_column_2 {
+  margin-bottom: 80px;
+  display: flex;
+  // flex-wrap: wrap;
+}
+
+.work_ly_id_8 {
+  .work_ly_column_2 {
+    margin-bottom: 0px;
+  }
+}
+
+.vp-center {
+  height: auto;
+}
