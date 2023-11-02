@@ -8,9 +8,13 @@
 
       <WorkDetailPaging :work="work" :works_list="works_list"/>
 
+      <!-- コンテンツが複数の場合のメインタイトル -->
+      <p class="work_outline_title">{{work.outline_title}}</p>
+      
+
       <!-- 制作物が単一の場合はキャプションを表示-->
       <!-- (複数の場合は子コンポーネントにworks配列を渡して任意の場所で表示) -->
-      <WorkCaptioin :work="works[0]" v-if="work.works.length < 2"/>
+      <WorkCaptioin v-if="work.works.length < 2" :work="works[0]"/>
 
       <!-- 各ページ毎のコンテンツ -->
       <component :is="workDetailComponent" :works="works"/>

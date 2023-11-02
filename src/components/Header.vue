@@ -1,15 +1,16 @@
 <template>
   <header class="ly_header">
     <div class="ly_header_inner">
-      <div>
-        <a href="/">Momoka Tanifuji</a>
-      </div>
+      <h1>
+        <!-- <a href="/">Momoka Tanifuji</a> -->
+        <a href="/">MOMOKA TANIFUJI</a>
+      </h1>
       <ol class="bl_headerNav">
         <li>
-          <router-link to="/">Top</router-link>
+          <router-link to="/" :class="{'active' : is_page_top && visible}"><span>Top</span></router-link>
         </li>
         <li>
-          <router-link :to="{name: 'works'}">Works</router-link>
+          <router-link :to="{name: 'works'}" :class="{'active' : is_page_works}"><span>Works</span></router-link>
         </li>
       </ol>
     </div>
@@ -18,11 +19,17 @@
 
 <script>
 export default {
-  // computed: {
-  //   is_page_top() {
-  //     return this.$route.path == '/'
-  //   }
-  // },
+  props: [
+    'visible'
+  ],
+  computed: {
+    is_page_top() {
+      return this.$route.path == '/'
+    },
+    is_page_works() {
+      return this.$route.path == '/works'
+    }
+  },
 };
 </script>
 

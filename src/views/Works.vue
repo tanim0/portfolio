@@ -21,9 +21,9 @@
         </router-link>
       </li>
     </ul>
-    <p class="link_works_documents">
+    <!-- <p class="link_works_documents">
       <router-link to="">過去担当業務一覧ページへ</router-link>
-    </p>
+    </p> -->
   </div>
 </template>
 

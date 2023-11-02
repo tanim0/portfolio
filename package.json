@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.15.14",
+    "rellax": "^1.12.1",
     "swiper": "^10.3.1",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^5.0.1",

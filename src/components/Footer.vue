@@ -1,6 +1,6 @@
 <template>
     <footer class="ly_footer">
-        <p>&copy; mngl All Rights Reserved.</p>
+        <p>&copy; Momoka Tanifuji All Rights Reserved.</p>
     </footer>
 </template>
 
