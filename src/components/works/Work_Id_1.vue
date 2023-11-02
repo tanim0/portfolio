@@ -6,12 +6,12 @@
       <div class="work_ly_column_2">
         <div class="img_box img_stamp">
           <p class="img_caption">スタンプカード&nbsp;&nbsp;W91×H55(オモテ&#9585;ウラ)</p>
-          <img :src="require(`@/assets/images/works/work_1_card_1.png`)" alt=""/>
+          <img :src="require(`@/assets/images/work_1_card_1.png`)" alt=""/>
         </div>
         <div class="img_box img_rough">
           <p class="img_caption">ラフ</p>
-          <img :src="require(`@/assets/images/works/work_1_rough_1.png`)" alt=""/>
-          <img :src="require(`@/assets/images/works/work_1_rough_2.png`)" alt=""/>
+          <img :src="require(`@/assets/images/work_1_rough_1.png`)" alt=""/>
+          <img :src="require(`@/assets/images/work_1_rough_2.png`)" alt=""/>
         </div>
       </div>
     <!-- </div> -->
@@ -21,7 +21,7 @@
     <div class="work_ly_column_2">
       <div class="img_box img_stamp">
         <p class="img_caption">スタンプカード&nbsp;&nbsp;W91×H55(オモテ&#9585;ウラ)</p>
-        <img :src="require(`@/assets/images/works/work_1_card_2.png`)" alt=""/>
+        <img :src="require(`@/assets/images/work_1_card_2.png`)" alt=""/>
       </div>
       <div class="img_box img_movie pc">
         <p class="img_caption">Movie※音が出ます<span class="password">(Password：1972)</span></p>
