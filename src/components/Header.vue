@@ -2,12 +2,11 @@
   <header class="ly_header">
     <div class="ly_header_inner">
       <h1>
-        <!-- <a href="/">Momoka Tanifuji</a> -->
-        <a href="/">MOMOKA TANIFUJI</a>
+        <router-link :to="{name: 'home'}">MOMOKA TANIFUJI</router-link>
       </h1>
       <ol class="bl_headerNav">
         <li>
-          <router-link to="/" :class="{'active' : is_page_top && visible}"><span>Top</span></router-link>
+          <router-link :to="{name: 'home'}" :class="{'active' : is_page_top && visible}"><span>Top</span></router-link>
         </li>
         <li>
           <router-link :to="{name: 'works'}" :class="{'active' : is_page_works}"><span>Works</span></router-link>
