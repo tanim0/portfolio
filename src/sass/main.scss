@@ -2,7 +2,7 @@
 
 // ブレイクポイントmixin
 @mixin media_sp(){
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     @content;
   }
 }
@@ -115,6 +115,10 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include media_sp() {
+    padding: 0 4%;
+  }
 }
 
 .bl_headerNav {
@@ -123,11 +127,20 @@ h1 {
   li {
     width: 72px;
     text-align: center;
+
+    @include media_sp() {
+      &:first-child {
+        display: none;
+      }
+    }
   }
 
   span {
     margin-top: 4px;
     display: inline-block;
+    @include media_sp() {
+      margin-top: 10px;
+    }
   }
 
   a {
@@ -355,13 +368,21 @@ h1 {
   position: relative;
   background: $themeColor;
 
+  @include media_sp() {
+    height: 160vw;
+    background: $themeColor;
+  }
+
 }
 
 .top_img {
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  // margin: 50px auto 0;
+
+  @include media_sp() {
+    height: 100%;
+  }
 
   img {
     width: 100%;
@@ -371,11 +392,15 @@ h1 {
 
     opacity: 0;
     filter: blur(20px) brightness(2);
-    // transform: scale(1.2);    
-  }
-}
+    // transform: scale(1.2);
 
-.top_img {
+    @include media_sp() {
+      // width: 130%;
+      height: 120%;
+      object-position: center -50vw;
+    }
+  }
+
   &.active img {
     opacity: 1;
     filter: blur(0px) brightness(1);
@@ -391,20 +416,30 @@ h1 {
   position: absolute;
   text-align: center;
   color: $colorWhite;
+  @include media_sp() {
+    top: 25%;
+  }
   
 }
 
 .top_txt_name {
   margin-bottom: 1.4vw;
   font-size: 12vw;
-  font-family: 'Josefin Sans'
+  font-family: 'Josefin Sans';
+  @include media_sp() {
+    margin-bottom: 30vw;
+    font-size: 19vw;
+  }
 }
 
 .top_txt_title {
   // font-size: 5vw;
   font-size: 3vw;
   font-weight: 500;
-  font-family: 'Josefin Sans'
+  font-family: 'Josefin Sans';
+  @include media_sp() {
+    font-size: 7vw;
+  }
 }
 
 .top_txt_arrow {
@@ -412,6 +447,9 @@ h1 {
   width: 60px;
   margin: 3vw auto 0;
   transform: rotate(90deg);
+  @include media_sp() {
+    margin-top: 13vw;
+  }
 
   .line01 {
     display: block;
@@ -445,6 +483,10 @@ h1 {
   // text-align: center;
   text-align: center;
 
+  @include media_sp() {
+    padding: 50px 5%;
+  }
+
   .section_text {
     display: inline-block;
     text-align: left;
@@ -457,9 +499,19 @@ h1 {
   background: $themeColor;
   color: $colorWhite;
 
+  @include media_sp() {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
   .section_title {
     margin-bottom: 70px;
     padding-left: 50px;
+
+    @include media_sp() {
+      margin-bottom: 50px;
+      padding-left: 13%;
+    }
 
   &::before {
     margin-left: 10px;
@@ -561,6 +613,13 @@ h1 {
   min-height: 500px;
   text-align: left;
 
+  @include media_sp() {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
   p {
     line-height: 1.6;
     // text-indent: 1em;
@@ -606,6 +665,10 @@ h1 {
   width: 29%;
   width: 31%;
 
+  @include media_sp() {
+    width: 48%;
+  }
+
   a:hover {
     .work_list_item_icon {
       position: relative;
@@ -649,7 +712,11 @@ h1 {
   word-break: break-all;
   line-height: 1.5;
   transition: color .3s;
-  color: $themeColorWhite
+  color: $themeColorWhite;
+
+  @include media_sp() {
+    font-size: 15px;
+  }
 }
 
 .work_list_item_range {
@@ -694,6 +761,10 @@ h1 {
   margin: 0 auto 60px;
   padding: 0 20px;
   max-width: 900px;
+
+  @include media_sp() {
+    padding: 0;
+  }
 }
 
 .works_detail_paging {
@@ -773,7 +844,15 @@ h1 {
 
 .work_description {
   margin: 30px 0 0;
-  line-height: 1.6;
+  line-height: 1.5;
+
+  @include media_sp() {
+    line-height: 2;
+  }
+
+  p {
+    margin: 10px 0;
+  }
 }
 
 
@@ -876,6 +955,11 @@ h1 {
   color: $themeColorAccent;
   font-size: 16px;
   display: inline-block;
+
+  &:hover {
+    background: $themeColorAccent;
+    color: $colorWhite;
+  }
 }
 
 

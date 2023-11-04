@@ -79,7 +79,7 @@
 
     
 
-    <p  ref="section_skill"><router-link :to="{name: 'resume'}">れじゅめへああああああ</router-link></p>
+    <!-- <p  ref="section_skill"><router-link :to="{name: 'resume'}">れじゅめへああああああ</router-link></p> -->
 
     <!-- <p>{{Works}}</p> -->
 

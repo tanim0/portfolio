@@ -15,8 +15,10 @@
     <p class="work_skill">tool：
       <span v-for="(tool, index) in work.tool" :key="index">{{tool}}&nbsp;<span class="slash">&#9585;</span>&nbsp;</span>
     </p>
-    
-    <p v-html="work.description" class="work_description"></p>
+
+    <div class="work_description">
+      <p v-for="(val, index) in work.description" :key="index">{{val}}</p>
+    </div>
   </section>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <footer class="ly_footer">
-        <p>&copy; Momoka Tanifuji All Rights Reserved.</p>
+        <p>&copy; Momoka Tanifuji 2023</p>
     </footer>
 </template>
 
