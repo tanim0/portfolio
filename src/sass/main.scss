@@ -426,9 +426,11 @@ h1 {
   margin-bottom: 1.4vw;
   font-size: 12vw;
   font-family: 'Josefin Sans';
+  line-height: 1;
   @include media_sp() {
     margin-bottom: 30vw;
     font-size: 19vw;
+    line-height: 1.1;
   }
 }
 

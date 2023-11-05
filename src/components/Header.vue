@@ -2,7 +2,10 @@
   <header class="ly_header">
     <div class="ly_header_inner">
       <h1>
-        <router-link :to="{name: 'home'}">MOMOKA TANIFUJI</router-link>
+        <router-link :to="{name: 'home'}">
+          <template v-if="$store.state.user">MOMOKA TANIFUJI</template>
+          <template v-else>HARUKA ITOH</template>
+        </router-link>
       </h1>
       <ol class="bl_headerNav">
         <li>

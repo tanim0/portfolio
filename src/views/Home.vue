@@ -14,8 +14,10 @@
       <section class="section_top">
         <p id="top_img" class="top_img" :class="{'active': load}"><img src="../assets/images/img_top.jpeg" alt=""></p>
         <div class="top_txt">
-          <!-- <p class="top_txt_name">Momoka Tanifuji</p> -->
-          <p class="top_txt_name">MOMOKA TANIFUJI</p>
+          <p class="top_txt_name">
+            <template v-if="$store.state.user">MOMOKA<br>TANIFUJI</template>
+            <template v-else>HARUKA<br>ITOH</template>
+          </p>
           <p class="top_txt_title">PORTFOLIO</p>
           <div class="fadeDown">
             <p class="top_txt_arrow">
@@ -33,9 +35,18 @@
         <div :class="{'fadeInAbout' : visible_about}" v-show="visible_about">
           <p class="section_title">About</p>
           <div class="section_text">
-            <p>大学卒業後、雑貨専門店の経営支援を行う会社で、デザインと販促動画制作を中心とした販売促進業務に3年半従事しました。</p>
-            <p>その後Web関連にデザインの幅を広げようと転職したITベンチャー企業では、Webのデザインとコーディングを中心とした開発業務に2年半従事し、<br class="pc">1つの案件において、チラシ・Web・動画制作等を一括して担当することでスピード感のあるサービスリリースを行ってきました。</p>
-            <p>最終職では前職までの経験を活かしながら、フルスクラッチ開発業務の主にデザイン・コーディング担当として4年間従事しました。<br>タスクランナーやフレームワーク(主にVue.js)を使用し、効率の良い開発を心がけ、また、担当できる範囲を広げられるよう取り組みました。</p>
+            <template v-if="$store.state.user">
+              <p>大学卒業後、雑貨専門店の経営支援を行う会社で、デザインと販促動画制作を中心とした販売促進業務に3年半従事しました。</p>
+              <p>その後Web関連にデザインの幅を広げようと転職したITベンチャー企業では、Webのデザインとコーディングを中心とした開発業務に2年半従事し、<br class="pc">1つの案件において、チラシ・Web・動画制作等を一括して担当することでスピード感のあるサービスリリースを行ってきました。</p>
+              <p>最終職では前職までの経験を活かしながら、フルスクラッチ開発業務の主にデザイン・コーディング担当として4年間従事しました。<br>タスクランナーやフレームワーク(主にVue.js)を使用し、効率の良い開発を心がけ、また、担当できる範囲を広げられるよう取り組みました。</p>
+            </template>
+            <template v-else>
+              <p>大学卒業後、雑貨専門店の経営支援を行う会社で、デザインと販促動画制作を中心とした販売促進業務に3年半従事しました。</p>
+              <p>その後Web関連にデザインの幅を広げようと転職したITベンチャー企業では、Webのデザインとコーディングを中心とした開発業務に2年半従事し、<br class="pc">1つの案件において、チラシ・Web・動画制作等を一括して担当することでスピード感のあるサービスリリースを行ってきました。</p>
+              <p>現職のシステム開発会社では前職までの経験を活かしながら、フルスクラッチ開発業務の主にデザイン・コーディング担当として従事し4年になります。</p>
+            </template>
+
+            
           </div>
 
         </div>
@@ -260,8 +271,8 @@ export default {
     },
     handleScrollSkill() {
       // console.log('visible_skill', this.visible_skill)
-      console.log('test', this.$refs.section_skill.getBoundingClientRect().top)
-      console.log(window.pageYOffset, this.rect_skill - 1000)
+      // console.log('test', this.$refs.section_skill.getBoundingClientRect().top)
+      // console.log(window.pageYOffset, this.rect_skill - 1000)
       // スクロール量が絶対位置(-若干上)より多くなったら
       if (!this.visible_skill) {
         this.visible_skill = window.pageYOffset > this.rect_skill - 1600;

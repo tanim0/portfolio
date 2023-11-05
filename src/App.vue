@@ -5,16 +5,9 @@
       <main class="ly_main">
         <ScrollTop />
         <div class="ly_main_inner">
-          <!-- <transition>
-            <div v-show="visible">
-              <h1 id="header-logo">ここがフェードイン・アウトするよ</h1>
-            </div>
-          </transition> -->
           <router-view />
         </div>
       </main>
-      
-      
       <Footer />
     </div>
   </div>
@@ -41,7 +34,30 @@ export default {
       return this.$route.path == '/'
     }
   },
+  watch: {
+    // ページ遷移毎にパラメータを確認し、ユーザーを判別
+    '$route': function(to, from) {
+      if(to.path !== from.path) {
+        const path = location.pathname.split('/');
+        console.log('path[1]', path[1])
+        if(path[1] == 'pf') {
+            this.$store.state.user = true
+        }
+        console.log('this.$store.state.user', this.$store.state.user)
+      }
+    }
+  },
   created() {
+    const host = location.hostname.split('.');
+    console.log('location.hostname', location.hostname)
+    console.log('host', host)
+
+    // if(host[0] == 'tanifuji' || host[0] == 'localhost') {
+    if(host[0] == 'tanifuji') {
+        this.$store.state.user = true
+    }
+    console.log('this.$store.state.user', this.$store.state.user)
+
     window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
@@ -53,6 +69,12 @@ export default {
         this.visible = !this.visible;
       }
     },
+    funcUser() {
+      const path = location.pathname.split('/');
+      if(path[1] == 'pf') {
+        this.$store.state.user = true
+      }
+    }
   },
 };
 </script>
