@@ -39,24 +39,22 @@ export default {
     '$route': function(to, from) {
       if(to.path !== from.path) {
         const path = location.pathname.split('/');
-        console.log('path[1]', path[1])
+        // console.log('path[1]', path[1])
         if(path[1] == 'pf') {
             this.$store.state.user = true
         }
-        console.log('this.$store.state.user', this.$store.state.user)
+        // console.log('this.$store.state.user', this.$store.state.user)
       }
     }
   },
   created() {
     const host = location.hostname.split('.');
-    console.log('location.hostname', location.hostname)
-    console.log('host', host)
 
     // if(host[0] == 'tanifuji' || host[0] == 'localhost') {
     if(host[0] == 'tanifuji') {
         this.$store.state.user = true
     }
-    console.log('this.$store.state.user', this.$store.state.user)
+    // console.log('this.$store.state.user', this.$store.state.user)
 
     window.addEventListener("scroll", this.handleScroll);
   },
