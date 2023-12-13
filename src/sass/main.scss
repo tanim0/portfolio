@@ -341,6 +341,14 @@ h1 {
   font-size: 30px;
   text-align: center;
 }
+.page_title_note {
+  margin: 10px;
+  font-size: 12px;
+  color: $colorWhite;
+  color: $nonColored_9;
+  text-align: center;
+  display: block;
+}
 
 
 // page_top
@@ -820,6 +828,18 @@ h1 {
   font-weight: bold;
 }
 
+.work_link {
+  margin-top: 4px;
+  margin-left: 10px;
+  color: $themeColorAccent;
+  display: inline-block;
+  vertical-align: middle;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
 .work_time {
   margin: 10px 0 6px;
   font-size: 12px;
@@ -832,6 +852,7 @@ h1 {
 .work_range,
 .work_skill {
   margin-bottom: 4px;
+  word-break: break-all;
 
   span:last-child .slash {
     display: none;
@@ -840,6 +861,11 @@ h1 {
 
 .work_environment {
   // margin-top: 20px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.work_member {
   margin-bottom: 20px;
   font-size: 12px;
 }
@@ -849,11 +875,14 @@ h1 {
   line-height: 1.5;
 
   @include media_sp() {
-    line-height: 2;
+    line-height: 1.8;
   }
 
   p {
     margin: 10px 0;
+    @include media_sp() {
+      margin: 14px 0;
+    }
   }
 }
 
@@ -910,6 +939,15 @@ h1 {
 // .page-stamp 
 .img_movie {
   margin: 40px 0 0;
+
+  @include media_sp() {
+    width: 100%;
+
+    iframe {
+      width: 100%;
+      // height: 60%;
+    }
+  }
 }
 
 .img_app {
@@ -928,6 +966,10 @@ h1 {
 .work_ly_column_2 {
   margin-bottom: 80px;
   display: flex;
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
 }
 
 .work_ly_id_8 {

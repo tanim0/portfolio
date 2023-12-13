@@ -18,7 +18,7 @@
 
     <WorkCaptioin :work="work[1]"/>
 
-    <div class="work_ly_column_2">
+    <div class="work_ly_column_2 wrap">
       <div class="img_box img_stamp">
         <p class="img_caption">スタンプカード&nbsp;&nbsp;W91×H55(オモテ&#9585;ウラ)</p>
         <img :src="require(`@/assets/images/work_1_card_2.png`)" alt=""/>

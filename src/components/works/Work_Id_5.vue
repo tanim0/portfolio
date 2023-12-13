@@ -3,7 +3,7 @@
     <WorkCaptioin :work="work[0]" class="mb30"/>
 
     <div class="work_ly_column_2">
-      <div class="img_box">
+      <div class="img_box img_movie">
         <p class="img_caption">Movie※音が出ます<span class="password">(Password：1972)</span></p>
         <iframe src="https://player.vimeo.com/video/874787435" width="400" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
       </div>

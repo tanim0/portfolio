@@ -39,6 +39,7 @@ import Work6 from '@/components/works/Work_Id_6.vue'
 import Work7 from '@/components/works/Work_Id_7.vue'
 import Work8 from '@/components/works/Work_Id_8.vue'
 import Work9 from '@/components/works/Work_Id_9.vue'
+import Work10 from '@/components/works/Work_Id_10.vue'
 
 export default {
   components: {
@@ -53,7 +54,8 @@ export default {
     Work6,
     Work7,
     Work8,
-    Work9
+    Work9,
+    Work10,
   },
   data() {
     return {

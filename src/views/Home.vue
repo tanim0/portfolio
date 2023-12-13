@@ -202,6 +202,10 @@ export default {
           id: 9,
           url: 'icon_muscut.jpg'
         },
+        {
+          id: 10,
+          url: 'icon_pcr.jpg'
+        },
       ],
       rect_about: 0,
       rect_skill: 0,

@@ -1,6 +1,10 @@
 <template>
   <div class="page page_works">
-    <h2 class="page_title">Works</h2>
+    <h2 class="page_title">Works
+      <span class="page_title_note">※一部制作物について画質を落としたりぼかさせていただいているものがございます。</span>
+    </h2>
+    
+    
 
     <ul class="works_list">
       <li v-for="(work, index) in works_list" :key="index" class="work_list_item">
