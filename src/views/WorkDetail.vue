@@ -1,10 +1,6 @@
 <template>
   <div class="page page_works_detail">
     <div class="works_detail_inner">
-      <!-- <WorksSlot>
-        <template v-slot:work_title>未来太郎</template>
-        <template v-slot:n>未来太郎</template>
-      </WorksSlot> -->
 
       <WorkDetailPaging :work="work" :works_list="works_list"/>
 
@@ -27,7 +23,6 @@
 
 <script>
 import Works from '@/resources/works.js'
-import WorksSlot from '@/components/works/WorksSlot.vue'
 import WorkCaptioin from '@/components/works/WorkCaptioin.vue'
 import WorkDetailPaging from '@/components/works/WorkDetailPaging.vue'
 import Work1 from '@/components/works/Work_Id_1.vue'
@@ -43,7 +38,6 @@ import Work10 from '@/components/works/Work_Id_10.vue'
 
 export default {
   components: {
-    WorksSlot,
     WorkCaptioin,
     WorkDetailPaging,
     Work1,

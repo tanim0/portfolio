@@ -4,17 +4,19 @@
       <h1>
         <router-link :to="{name: 'home'}">
           <template v-if="$store.state.user">MOMOKA TANIFUJI</template>
-          <template v-else>HARUKA ITOH</template>
+          <template v-else>MOMOKA TANIFUJI</template>
         </router-link>
       </h1>
-      <ol class="bl_headerNav">
-        <li>
-          <router-link :to="{name: 'home'}" :class="{'active' : is_page_top && visible}"><span>Top</span></router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'works'}" :class="{'active' : is_page_works}"><span>Works</span></router-link>
-        </li>
-      </ol>
+      <nav>
+        <ul class="bl_headerNav">
+          <li>
+            <router-link :to="{name: 'home'}" :class="{'active' : is_page_top && visible}"><span>Top</span></router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'works'}" :class="{'active' : is_page_works}"><span>Works</span></router-link>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 </template>

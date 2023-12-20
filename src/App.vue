@@ -39,23 +39,17 @@ export default {
     '$route': function(to, from) {
       if(to.path !== from.path) {
         const path = location.pathname.split('/');
-        // console.log('path[1]', path[1])
         if(path[1] == 'pf') {
             this.$store.state.user = true
         }
-        // console.log('this.$store.state.user', this.$store.state.user)
       }
     }
   },
   created() {
     const host = location.hostname.split('.');
-
-    // if(host[0] == 'tanifuji' || host[0] == 'localhost') {
     if(host[0] == 'tanifuji') {
         this.$store.state.user = true
     }
-    // console.log('this.$store.state.user', this.$store.state.user)
-
     window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
@@ -78,22 +72,5 @@ export default {
 </script>
 
 <style scoped>
-.v-enter {
-  opacity: 0;
-}
-
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 1s;
-}
-
-.v-enter-to {
-  opacity: 1;
-}
-
-.v-leave-to {
-  opacity: 0;
-  transition: opacity 1s;
-}
 </style>
 
